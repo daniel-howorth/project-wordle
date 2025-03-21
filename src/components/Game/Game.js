@@ -13,7 +13,7 @@ console.info({ answer });
 function Game() {
   const [guessHistory, setGuestHistory] = React.useState([]);
 
-  function updateGuessHistory(guessHistory, nextGuessValue) {
+  function updateGuessHistory(nextGuessValue) {
     const nextGuessEntry = { id: crypto.randomUUID(), value: nextGuessValue };
     const nextGuessHistory = [...guessHistory, nextGuessEntry];
     setGuestHistory(nextGuessHistory);
@@ -23,10 +23,7 @@ function Game() {
   return (
     <>
       <GuessResults guessHistory={guessHistory} />
-      <GuessInput
-        guessHistory={guessHistory}
-        updateGuessHistory={updateGuessHistory}
-      />
+      <GuessInput updateGuessHistory={updateGuessHistory} />
     </>
   );
 }

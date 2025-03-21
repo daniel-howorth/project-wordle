@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput({ guessHistory, updateGuessHistory }) {
+function GuessInput({ updateGuessHistory }) {
   const [guessValue, setGuessValue] = React.useState("");
 
   return (
@@ -8,7 +8,7 @@ function GuessInput({ guessHistory, updateGuessHistory }) {
       className="guess-input-wrapper"
       onSubmit={(event) => {
         event.preventDefault();
-        updateGuessHistory(guessHistory, guessValue);
+        updateGuessHistory(guessValue);
         setGuessValue("");
       }}
     >
