@@ -1,5 +1,6 @@
 import React from "react";
 import GuessInput from "../GuessInput/GuessInput";
+import GuessResults from "../GuessResults/GuessResults";
 
 import { sample } from "../../utils";
 import { WORDS } from "../../data";
@@ -19,10 +20,13 @@ function Game() {
   }
 
   return (
-    <GuessInput
-      guessHistory={guessHistory}
-      updateGuessHistory={updateGuessHistory}
-    ></GuessInput>
+    <>
+      <GuessResults guessHistory={guessHistory} />
+      <GuessInput
+        guessHistory={guessHistory}
+        updateGuessHistory={updateGuessHistory}
+      />
+    </>
   );
 }
 
