@@ -5,17 +5,19 @@ function GuessInput() {
 
   return (
     <form
-      class="guess-input-wrapper"
+      className="guess-input-wrapper"
       onSubmit={(event) => {
         event.preventDefault();
         console.info(guessValue);
         setGuessValue("");
       }}
     >
-      <label for="guess-input">Enter guess:</label>
+      <label htmlFor="guess-input">Enter guess:</label>
       <input
         id="guess-input"
         type="text"
+        pattern=".{5}"
+        title="Please enter a five letter word"
         value={guessValue}
         onChange={(event) => {
           setGuessValue(event.target.value.toUpperCase());
