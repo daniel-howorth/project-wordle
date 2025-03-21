@@ -13,8 +13,9 @@ console.info({ answer });
 function Game() {
   const [guessHistory, setGuestHistory] = React.useState([]);
 
-  function updateGuessHistory(guessHistory, nextGuess) {
-    const nextGuessHistory = [...guessHistory, nextGuess];
+  function updateGuessHistory(guessHistory, nextGuessValue) {
+    const nextGuessEntry = { id: crypto.randomUUID(), value: nextGuessValue };
+    const nextGuessHistory = [...guessHistory, nextGuessEntry];
     setGuestHistory(nextGuessHistory);
     console.log(nextGuessHistory);
   }
