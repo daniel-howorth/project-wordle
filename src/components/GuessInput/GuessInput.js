@@ -9,6 +9,7 @@ function GuessInput() {
       onSubmit={(event) => {
         event.preventDefault();
         console.info(guessValue);
+        setGuessValue("");
       }}
     >
       <label for="guess-input">Enter guess:</label>
