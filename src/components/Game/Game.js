@@ -10,6 +10,14 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
+  const [guessHistory, setGuestHistory] = React.useState([]);
+
+  function updateGuessHistory(guessHistory, nextGuess) {
+    const nextGuessHistory = [...guessHistory, nextGuess];
+    setGuestHistory(nextGuessHistory);
+    console.log(nextGuessHistory);
+  }
+
   return <GuessInput></GuessInput>;
 }
 
