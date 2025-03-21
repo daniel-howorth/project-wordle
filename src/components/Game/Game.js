@@ -23,6 +23,7 @@ function Game() {
       <GuessResults
         guessHistory={guessHistory}
         maxGuesses={NUM_OF_GUESSES_ALLOWED}
+        answer={answer}
       />
       <GuessInput updateGuessHistory={updateGuessHistory} />
     </>
