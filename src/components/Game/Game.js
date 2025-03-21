@@ -18,7 +18,12 @@ function Game() {
     console.log(nextGuessHistory);
   }
 
-  return <GuessInput></GuessInput>;
+  return (
+    <GuessInput
+      guessHistory={guessHistory}
+      updateGuessHistory={updateGuessHistory}
+    ></GuessInput>
+  );
 }
 
 export default Game;
