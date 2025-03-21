@@ -3,6 +3,8 @@ import React from "react";
 import { range } from "../../utils";
 
 function Guess({ guessValue }) {
+  // const chars = guessValue ? guessValue.split("") : Array(5).fill("");
+
   return (
     <p className="guess">
       {range(5).map((num) => (
@@ -11,6 +13,14 @@ function Guess({ guessValue }) {
         </span>
       ))}
     </p>
+
+    // <p className="guess">
+    //   {chars.map((char, index) => (
+    //     <span key={index} className="cell">
+    //       {char}
+    //     </span>
+    //   ))}
+    // </p>
   );
 }
 
